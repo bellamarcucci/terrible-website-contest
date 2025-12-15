@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Support Nightmare</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Fake cookie banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <p>
+            We use 999 types of cookies for reasons we can't explain.
+            By continuing, you agree to everything and nothing at the same time.
+        </p>
+        <button id="cookieAcceptBig" class="button-big-useless">ACCEPT ABSOLUTELY EVERYTHING</button>
+        <button id="cookieAcceptTiny" class="button-tiny-real">ok</button>
+    </div>
+
+    <!-- Popup -->
+    <div class="exit-popup hidden" id="exitPopup">
+        <div class="exit-popup-content">
+            <h2>Are you sure you want to leave this page?</h2>
+            <p>
+                Our support team is almost, nearly, kind of reading your mind already.
+                Leaving now might reset your entire existence.
+            </p>
+            <div class="exit-popup-buttons">
+                <button id="stayButton" class="button-huge">YES, KEEP ME HERE</button>
+                <button id="leaveButton" class="button-teeny">no</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="logo-badge">
+            <img src="./images/support-24-7.gif" alt="24/7 Support" class="logo-gif">
+            <span class="logo-text">Customer Support 24/7* </span>
+        </div>
+        <p class="header-disclaimer">*24/7 support response time may vary between 2 minutes and 2 years.</p>
+        <nav class="main-nav">
+            <a href="#support-form" class="nav-link">Contact Us</a>
+            <a href="#support-form" class="nav-link">Help</a>
+            <a href="#support-form" class="nav-link">Live Chat</a>
+            <a href="#support-form" class="nav-link">Ticket Status</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-left">
+                <h1>Welcome to the Ultimate Customer Support Nightmare</h1>
+                <p class="hero-subtitle">
+                    We are almost committed to nearly solving part of your problem, eventually.
+                </p>
+
+                <button class="button-huge fake-cta" id="fakeCtaTop">
+                    GET INSTANT HELP NOW!!!
+                </button>
+
+                <p class="hero-note important-note">
+                    If you really need support, please find the tiny link hidden somewhere on this page.
+                </p>
+            </div>
+
+            <div class="hero-right">
+                <img src="./images/help-desk-chaos.png" alt="Very professional help desk"
+                     class="hero-image">
+                <p class="hero-caption">
+                    Actual photo of our support team (artist's imagination, not reality).
+                </p>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <h2>Our Impressive Support Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">0.01%</span>
+                    <span class="stat-label">Tickets answered on time</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">999+</span>
+                    <span class="stat-label">Times we said “Have you tried turning it off and on?”</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">42</span>
+                    <span class="stat-label">Different ways to avoid your question</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Minutes waiting on live chat</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call center banner -->
+        <section class="floating-banner">
+            <img src="./images/call-center-smile.png" alt="Smiling call center agent">
+            <p>
+                ALL OUR AGENTS ARE CURRENTLY SMILING.<br>
+                PLEASE HOLD WHILE WE FIND YOUR PATIENCE.
+            </p>
+            <button class="banner-close" id="bannerClose">X</button>
+        </section>
+
+        <!-- Form -->
+        <section class="form-section" id="support-form">
+            <h2>Open a Support Ticket (Good luck)</h2>
+            <p class="form-intro">
+                Please complete every single field with extreme precision. Any minor mistake will
+                result in complete loss of your progress and possibly your sanity.
+            </p>
+
+            <form id="nightmareForm" class="nightmare-form" novalidate>
+                <div class="form-row">
+                    <label for="fullName">Full name (no typos allowed):</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email (we might never reply):</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="issueType">Type of issue (pick the least wrong one):</label>
+                    <select id="issueType" name="issueType" required>
+                        <option value="">-- Select something that feels vaguely correct --</option>
+                        <option value="login">I cannot log in but I swear my password is right</option>
+                        <option value="payment">Payment went through but nothing happened</option>
+                        <option value="bug">Everything is broken and I am screaming</option>
+                        <option value="existential">I forgot why I opened this website</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <fieldset class="radio-group">
+                        <legend>How urgent is this?</legend>
+                        <label>
+                            <input type="radio" name="urgency" value="low" required>
+                            Low (I like to suffer slowly)
+                        </label>
+                        <label>
+                            <input type="radio" name="urgency" value="medium">
+                            Medium (I am mildly panicking)
+                        </label>
+                        <label>
+                            <input type="radio" name="urgency" value="high">
+                            High (I am currently on fire)
+                        </label>
+                    </fieldset>
+                </div>
+
+                <div class="form-row bad-contrast">
+                    <label for="description">
+                        Describe your problem in <strong>exactly 327 characters</strong>:
+                    </label>
+                    <textarea id="description" name="description" rows="4"
+                              placeholder="If this description is not exactly 327 characters, your ticket will be silently discarded."
+                              required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <label for="favoriteColor">
+                        Security question: What is your favorite color (we will never use this)?
+                    </label>
+                    <input type="text" id="favoriteColor" name="favoriteColor" required>
+                </div>
+
+                <div class="form-row terms-row">
+                    <div class="terms-box">
+                        <p>
+                            TERMS &amp; CONDITIONS (short excerpt from our 987-page document):<br><br>
+                            By submitting this form you agree that we may ignore, misinterpret, or
+                            forward your problem to the wrong department indefinitely. You also agree
+                            to receive promotional emails at 3:17 AM about products you never wanted.
+                        </p>
+                    </div>
+                    <div class="terms-confirm">
+                        <label class="tiny-label">
+                            <input type="checkbox" id="termsCheckbox" required>
+                            I have carefully read all 987 pages.
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Fake btn form -->
+                <div class="form-row fake-buttons-row">
+                    <button type="button" class="button-huge fake-cta" id="fakeSubmit">
+                        SUBMIT TICKET INSTANTLY
+                    </button>
+                    <button type="button" class="button-huge fake-cta" id="fakeChat">
+                        START LIVE CHAT (BETA)
+                    </button>
+                </div>
+
+                <!-- real tiny btn -->
+                <p class="tiny-submit-paragraph">
+                    If you somehow manage to find the actual submit button,
+                    you may click
+                    <button type="submit" class="button-tiny-real tiny-inline-button">
+                        here
+                    </button>
+                    to send your ticket into the void.
+                </p>
+            </form>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <h2>Frequently Avoided Questions</h2>
+
+            <details class="faq-item">
+                <summary>How long does it take to receive a reply?</summary>
+                <p>
+                    Our system automatically places your ticket at the end of the queue every 24 hours.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Can I talk to a real human?</summary>
+                <p>
+                    Our AI is currently learning how to say “We are sorry for the inconvenience.” A human might
+                    read your message if they get bored enough.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>How do I close my account?</summary>
+                <p>
+                    Please open a support ticket to request the form needed to ask for the link that sometimes
+                    contains partial instructions.
+                </p>
+            </details>
+        </section>
+    </main>
+
+    <!-- Live chat -->
+    <div class="fake-chat-widget" id="fakeChatWidget">
+        <div class="fake-chat-header">
+            Live Chat (BETA)
+            <span id="fakeChatClose" class="fake-chat-close">×</span>
+        </div>
+        <div class="fake-chat-body">
+            <p>
+                All our agents are currently busy helping other customers
+                pretend to get help. Please try again yesterday.
+            </p>
+        </div>
+    </div>
+
+    <!-- Floating btn -->
+    <button class="floating-chat-button" id="floatingChatButton">
+        NEED<br>HELP?
+    </button>
+
+    <footer class="site-footer">
+        <p>
+            © 1999–2099 Customer Support Nightmare. All rights reserved, or maybe not.
+            The following items look like links but do absolutely nothing:
+            Home · Privacy · Terms · Contact · Careers
+        </p>
+    </footer>
+
+</body>
+</html>
